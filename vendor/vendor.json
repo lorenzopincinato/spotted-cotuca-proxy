@@ -9,6 +9,36 @@
 			"revisionTime": "2018-10-14T15:34:29Z"
 		},
 		{
+			"checksumSHA1": "5Bn/Ei7gNca/b2FxXOVLyZC14D8=",
+			"path": "github.com/ChimeraCoder/tokenbucket",
+			"revision": "c5a927568de7aad8a58127d80bcd36ca4e71e454",
+			"revisionTime": "2013-12-01T22:36:12Z"
+		},
+		{
+			"checksumSHA1": "0mObkcij+rFu8YTXFQSD2L0PL7Q=",
+			"path": "github.com/azr/backoff",
+			"revision": "53511d3c733003985b0b76f733df1f4d0095ee6a",
+			"revisionTime": "2016-01-15T11:51:03Z"
+		},
+		{
+			"checksumSHA1": "jS7Bu5pqvZ7xfB3jZkoEV6IrOx4=",
+			"path": "github.com/dustin/go-jsonpointer",
+			"revision": "ba0abeacc3dcca5b9b20f31509c46794edbc9965",
+			"revisionTime": "2016-08-14T07:29:49Z"
+		},
+		{
+			"checksumSHA1": "Jx1fYjK0bFN8aq9OQwpt7eMsJwE=",
+			"path": "github.com/dustin/gojson",
+			"revision": "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30",
+			"revisionTime": "2016-03-07T16:12:27Z"
+		},
+		{
+			"checksumSHA1": "Dot5fKv3vVvDnj/JEn3NGD0bqhw=",
+			"path": "github.com/garyburd/go-oauth/oauth",
+			"revision": "bca2e7f09a178fd36b034107a00e2323bca6a82e",
+			"revisionTime": "2018-03-19T15:54:56Z"
+		},
+		{
 			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "a7658810eb745c2f22927282dea478278103a897",
@@ -45,16 +75,46 @@
 			"revisionTime": "2019-02-05T22:20:52Z"
 		},
 		{
+			"checksumSHA1": "VddpP6GHKu0gmnqc9V7CIOhN59o=",
+			"path": "github.com/json-iterator/go",
+			"revision": "5bc93205020f6311d7e4a34f82c5616a18ec35e5",
+			"revisionTime": "2019-02-08T07:56:42Z"
+		},
+		{
 			"checksumSHA1": "LkbotKu3JQxXEZZ9P40yhnFOycY=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "3fb116b820352b7f0c281308a4d6250c22d94e27",
 			"revisionTime": "2018-08-30T10:17:45Z"
 		},
 		{
+			"checksumSHA1": "R7UwDjqiaLRoaEanrANwPOfbgN4=",
+			"path": "github.com/modern-go/concurrent",
+			"revision": "bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94",
+			"revisionTime": "2018-03-06T01:26:44Z"
+		},
+		{
+			"checksumSHA1": "SnVnj87vJdiHFJUcwdL03T0ZMhI=",
+			"path": "github.com/modern-go/reflect2",
+			"revision": "94122c33edd36123c84d5368cfb2b69df93a0ec8",
+			"revisionTime": "2018-07-18T01:23:57Z"
+		},
+		{
 			"checksumSHA1": "aH0WYEpdWFdSPe3bJeoVvD5Tql0=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "e444a5086c436778cf9281a7059a3d58b9e17935",
 			"revisionTime": "2019-02-04T20:13:41Z"
+		},
+		{
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"path": "golang.org/x/net/context",
+			"revision": "3a22650c66bd7f4fb6d1e8072ffd7b75c8a27898",
+			"revisionTime": "2019-02-11T12:35:32Z"
+		},
+		{
+			"checksumSHA1": "GS83dscwl/xqUgWCj+6k97Ej7UE=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "d0b11bdaac8adb652bff00e49bcacf992835621a",
+			"revisionTime": "2019-02-15T13:44:14Z"
 		},
 		{
 			"checksumSHA1": "q190bL03wQok3wVwYmMub2XhOiU=",
