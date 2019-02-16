@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "NyIJ/sAc2yOCaAm+yzCTmi1jaIQ=",
+			"path": "github.com/ChimeraCoder/anaconda",
+			"revision": "fba449f7b405a61af4f8a9246bd557f9625bd7be",
+			"revisionTime": "2018-10-14T15:34:29Z"
+		},
+		{
+			"checksumSHA1": "8b/4nelIgoHV+XmTU2y2/qRDfZk=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "5acf6601170bb49a1958c055d66d54ba152dc34b",
+			"revisionTime": "2019-02-04T01:27:00Z"
+		}
+	],
+	"rootPath": "github.com/lorenzopincinato/spotted-cotuca-proxy"
+}
