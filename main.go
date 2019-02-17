@@ -97,7 +97,7 @@ func main() {
 
 		} else {
 			c.JSON(200, gin.H{
-				"tweetId": tweet.Id,
+				"tweetId": tweet.IdStr,
 			})
 		}
 	})
