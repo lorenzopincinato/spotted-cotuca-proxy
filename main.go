@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/ChimeraCoder/anaconda"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -37,7 +38,7 @@ func after(value string, a string) string {
 	return value[adjustedPos:len(value)]
 }
 
-func treatError(errorString string) (errorCode int, errorBody []byte, err error) {
+func handleError(errorString string) (errorCode int, errorBody []byte, err error) {
 	errorCodeStr := between(errorString, "returned status ", ", {")
 	errorCode, err = strconv.Atoi(errorCodeStr)
 
@@ -50,6 +51,12 @@ func treatError(errorString string) (errorCode int, errorBody []byte, err error)
 
 func main() {
 	r := gin.Default()
+
+	config := cors.DefaultConfig()
+	config.AllowOrigins = []string{"https://newspottedctc.appspot.com"}
+
+	r.Use(cors.New(config))
+
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"status": "running",
@@ -77,7 +84,7 @@ func main() {
 		tweet, err := api.PostTweet(request.Message, nil)
 
 		if err != nil {
-			errorCode, errorBody, err := treatError(err.Error())
+			errorCode, errorBody, err := handleError(err.Error())
 
 			if err != nil {
 				c.JSON(500, gin.H{
@@ -119,7 +126,7 @@ func main() {
 		_, err = api.DeleteTweet(tweetID, false)
 
 		if err != nil {
-			errorCode, errorBody, err := treatError(err.Error())
+			errorCode, errorBody, err := handleError(err.Error())
 
 			if err != nil {
 				c.JSON(500, gin.H{
