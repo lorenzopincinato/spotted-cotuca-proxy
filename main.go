@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -36,11 +37,13 @@ func after(value string, a string) string {
 	return value[adjustedPos:len(value)]
 }
 
-func treatError(errorString string) (errorCode int, errorBody string, err error) {
+func treatError(errorString string) (errorCode int, errorBody []byte, err error) {
 	errorCodeStr := between(errorString, "returned status ", ", {")
 	errorCode, err = strconv.Atoi(errorCodeStr)
 
-	errorBody = "{" + after(errorString, ", {")
+	fmt.Print(errorString)
+
+	errorBody = []byte("{" + after(errorString, ", {"))
 
 	return errorCode, errorBody, err
 }
@@ -80,13 +83,16 @@ func main() {
 				c.JSON(500, gin.H{
 					"error": err.Error(),
 				})
-			}
-			c.Data(errorCode, "application/json; charset=utf-8", []byte(errorBody))
-		}
 
-		c.JSON(200, gin.H{
-			"tweetId": tweet.Id,
-		})
+			} else {
+				c.Data(errorCode, "application/json; charset=utf-8", errorBody)
+			}
+
+		} else {
+			c.JSON(200, gin.H{
+				"tweetId": tweet.Id,
+			})
+		}
 	})
 	r.DELETE("/tweet/:id", func(c *gin.Context) {
 		request := struct {
@@ -119,11 +125,14 @@ func main() {
 				c.JSON(500, gin.H{
 					"error": err.Error(),
 				})
-			}
-			c.Data(errorCode, "application/json; charset=utf-8", []byte(errorBody))
-		}
 
-		c.JSON(200, nil)
+			} else {
+				c.Data(errorCode, "application/json; charset=utf-8", errorBody)
+			}
+
+		} else {
+			c.JSON(200, nil)
+		}
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run()
 }
