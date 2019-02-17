@@ -53,7 +53,7 @@ func main() {
 	r := gin.Default()
 
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"https://newspottedctc.appspot.com"}
+	config.AllowOrigins = []string{"https://newspottedctc.appspot.com", "http://localhost:3000"}
 
 	r.Use(cors.New(config))
 
